@@ -7,9 +7,6 @@ public class EingabeHeld {
     }
 }
 
-
-
-
 class WarriorE{
     // Attribute
     String rasse ="";
