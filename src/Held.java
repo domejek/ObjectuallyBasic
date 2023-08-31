@@ -1,20 +1,8 @@
-public class Held {
-    public static void Main (String[] argv){
-        Warrior char1 = new Warrior("Mensch","Sword",10);
-        Warrior char2 = new Warrior("Zwerg","Axt");
-    }
-    public static void printHeld (Warrior w){
-        System.out.println("Rasse: " +w.rasse + "\n" +
-                "Waffe:" +w.waffe + "\n" +
-                "Level:" +w.level + "\n");
-    }
-}
-
 // Klassendeklaration
 class Warrior{
     // Attribute
-    String rasse;
-    String waffe;
+    private String rasse;
+    private String waffe;
     int level;
 
     // Konstruktoren
@@ -22,10 +10,34 @@ class Warrior{
         this.rasse=rasse;
         this.waffe=waffe;
         this.level=level;
+        if (level > 0)
+            this.level=level;
+
     }
     public Warrior(String rasse, String waffe){
         this.rasse=rasse;
         this.waffe=waffe;
         this.level=0;
+    }
+
+    // Methoden
+    public String getRasse(){
+        return rasse;
+    }
+    public void setRasse (String rasse){
+        this.rasse=rasse;
+    }
+    public String getWaffe(){
+        return rasse;
+    }
+    public void setWaffe (String waffe){
+        this.waffe=waffe;
+    }
+
+    public int getLevel(){
+        return level;
+    }
+    public void setLevel (int level){
+        this.level=level;
     }
 }
